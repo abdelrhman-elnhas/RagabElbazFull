@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'Web'], function () {
     Route::get('','HomeController@index');
+    Route::get('login','HomeController@login');
 });

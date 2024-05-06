@@ -6,8 +6,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="./{{asset('admin_files')}}/images/favicon.ico" type="image/ico" />
+	<meta name="theme-color" content="#EDC607" />
+    <meta name="author" content="Ultra Progress" />
+    <meta name="MobileOptimized" content="320" />
+    <meta property="og:title" content="Seyanty" />
+    <meta property="og:type" content="website" />
     <title>صيانتي</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./{{asset('web_files')}}/images/favicon.png" type="image/png">
     <!-- Bootstrap -->
     <link href="./{{asset('admin_files')}}/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->

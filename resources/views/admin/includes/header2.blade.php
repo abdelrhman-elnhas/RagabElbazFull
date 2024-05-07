@@ -4,7 +4,7 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title justify-content-center mt-4" style="border: 0;">
-                        <img width="70%" src="./{{asset('web_files')}}/images/logoWhite.png" alt="">
+                        <img width="70%" src="{{ env('APP_URL') }}/{{ asset('web_files') }}/images/logoWhite.png" alt="">
                     </div>
                     <div class="clearfix"></div>
                     <br />
@@ -13,23 +13,25 @@
                         <div class="menu_section">
                             <ul class="nav side-menu">
                                 <li>
-                                    <a href="{{ url('categories') }}"><i class="fa fa-bars"></i> الاقسام </a>
+                                    <a href="{{ url('admin') }}"><i class="fa fa-home"></i> الرئيسة </a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('admin/categories') }}"><i class="fa fa-bars"></i> الخدمات </a>
                                 </li>
                                 <li><a><i class="fa fa-users"></i> المستخدمين <span
                                             class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="{{ url('users') }}">المستخدمين</a></li>
-                                        <li><a href="{{ url('workers') }}">الموظفين</a></li>
+                                        <li><a href="{{ url('admin/users') }}">المستخدمين</a></li>
+                                        <li><a href="{{ url('admin/workers') }}">الموظفين</a></li>
                                     </ul>
                                 </li>
-                                <li><a><i class="fa fa-cubes"></i> الطلبات <span
-                                            class="fa fa-chevron-down"></span></a>
+                                <li><a><i class="fa fa-cubes"></i> الطلبات <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="{{ url('requests') }}">كل الطلبات</a></li>
+                                        <li><a href="{{ url('admin/requests') }}">كل الطلبات</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="{{ url('logout') }}"><i class="fa fa-sign-out"></i> تسجيل الخروج </a>
+                                    <a href="{{ url('admin/logout') }}"><i class="fa fa-sign-out"></i> تسجيل الخروج </a>
                                 </li>
                             </ul>
                         </div>
@@ -43,7 +45,7 @@
 
             <!-- top navigation -->
             <div class="top_nav">
-                <div class="nav_menu">
+                <div class="nav_menu mb-0">
                     <div class="nav toggle">
                         <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                     </div>
@@ -63,7 +65,7 @@
 
                                     <li class="nav-item">
                                         <a class="dropdown-item">
-                                            <span class="image"><img src="./{{ asset('admin_files') }}/images/img.jpg"
+                                            <span class="image"><img src="{{ env('APP_URL') }}/{{ asset('admin_files') }}/images/img.jpg"
                                                     alt="Profile Image" /></span>
                                             <span>
                                                 <span>John Smith</span>
@@ -89,4 +91,9 @@
                     </nav>
                 </div>
             </div>
-            <!-- /top navigation -->
+            <!-- page content -->
+            <div class="right_col" style="min-height: auto">
+                <div style="clear: both;"></div>
+                @include('admin.includes.message')
+
+                <!-- /top navigation -->

@@ -12,7 +12,7 @@ class RequestController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.request.index');
     }
 
     /**

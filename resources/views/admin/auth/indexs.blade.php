@@ -40,15 +40,16 @@
                 <section class="login_content">
                     <form method="POST" action="{{ url('admin/login') }}">
                         @csrf
-                        <img width="150" src="./{{ asset('web_files') }}/images/logo.png" alt="">
-                        <div class="mt-4">
-                            <input type="text" name="phone" class="form-control" placeholder="رقم الهاتف" required />
+                        <img width="150" class="mb-3" src="./{{ asset('web_files') }}/images/logo.png" alt="">
+                        @include('admin.includes.message')
+                        <div class="mt-2">
+                            <input type="number" name="phone" class="form-control mb-3" placeholder="رقم الهاتف" required />
                         </div>
                         <div>
                             <input type="password" name="password" class="form-control" placeholder="كلمه المرور" required />
                         </div>
                         <div>
-                            <a class="btn btn-warning submit" href="index.html">تسجيل الدخول</a>
+                            <button class="btn btn-warning submit" type="submit">تسجيل الدخول</button>
                         </div>
 
                         <div class="mt-4" dir="ltr">

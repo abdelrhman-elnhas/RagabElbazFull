@@ -1,23 +1,9 @@
 @extends('web.layouts.app2')
 @push('style')
-<link rel="stylesheet" href="{{asset('web_files')}}/css/dash.css" />
-<style>
-  .card {
-    padding: 0;
-  }
-
-  .card-img-top {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-  .original-button:hover{
-    color: #001a65;
-    border-color: #001a65
-  }
-</style>
+    <link rel="stylesheet" href="{{ env('APP_URL') . asset('web_files') }}/css/userDash.css" />
 @endpush
 @section('content')
-<main>
+    {{-- <main>
   <div class="cover" style=""></div>
   <section id="main">
     <div class="row">
@@ -102,29 +88,6 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="nav-records" role="tabpanel" aria-labelledby="nav-records-tab">
-          <div class="container">
-            <div class="row text-right">
-              @forelse ($audios as $audio)
-              <div class="col-lg-6 mb-2">
-                <div class="card w-100">
-                  <div class="card-body text-center">
-                    <h4 class="card-title">{{$audio->audio_name}}</h4>
-                    <p>{{$audio->description}}</p>
-                    <audio src="{{$audio->url}}" controls></audio>
-                  </div>
-                </div>
-              </div>
-              @empty
-              <div class="col-lg-12 mb-2">
-                <div class="alert alert-danger" role="alert">
-                  لا يوجد ملفات صوتية بعد
-                </div>
-              </div>
-              @endforelse
-            </div>
-          </div>
-        </div>
         <div class="tab-pane fade" id="nav-books" role="tabpanel" aria-labelledby="nav-books-tab">
           <div class="container">
             <div class="table-responsive">
@@ -186,5 +149,200 @@
       </div>
     </div>
   </section>
-</main>
+</main> --}}
+
+    <main class="d-flex align-items-center justify-content-center flex-column">
+        <section class="dashNav d-flex align-items-center justify-content-center mb-5">
+            <div class="dashNavOverlay"></div>
+            <div class="container d-flex flex-column align-items-center justify-content-center py-5">
+                <div class="user-img p-2 d-flex align-items-center justify-content-center flex-column">
+                    <img src="{{ env('APP_URL') . asset('web_files') }}/images/mainr.png" width="200px" height="200px"
+                        alt="" />
+                    <h3 class="userName">عبدالرحمن النحاس</h3>
+                </div>
+                <div class="col-12 p-2">
+                    <div class="nav-wrapper d-flex align-items-center justify-content-center">
+                        <button class="nav-btn courses-tab active">كورساتي 📖</button>
+                        <button class="nav-btn exams-tab">الامتحانات 📃</button>
+                        <button class="nav-btn marks-tab">نتايجي 📈</button>
+                        <button class="nav-btn books-tab">الكتب 📚</button>
+                        <button class="nav-btn audio-tab">صوتيات 🔊</button>
+                        <button class="nav-btn profile-tab">بروفايلي 📍</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="courses" class="tab py-5">
+            <div class="container">
+                <h2 class="section-title">كورساتي</h2>
+                <div class="row">
+                    <div class="col-lg-4 px-2">
+                        <div class="course-card">
+                            <img src="{{ env('APP_URL') . asset('web_files') }}/images/cources.jpg" class="card-img-top"
+                                alt="..." />
+                            <div class="card-body">
+                                <h5 class="card-title">نظرية كيرشوف</h5>
+                                <p class="card-text">
+                                    نظرية كيرشوف تحلل الدوائر الكهربائية. تتضمن قانونين للتيار
+                                    والجهد. تسهل فهم الدوائر المعقدة.
+                                </p>
+                                <a href="#" class="btn btn-main">تابع الدرس</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="exams" class="tab py-5">
+            <div class="container">
+                <h2 class="section-title">الامتحانات</h2>
+                <div class="row">
+                    <div class="col-lg-4 px-2">
+                        <div class="course-card">
+                            <div class="card-body">
+                                <h5 class="card-title">امتحان 1</h5>
+                                <p class="card-text">
+                                    نظرية كيرشوف تحلل الدوائر الكهربائية. تتضمن قانونين للتيار
+                                    والجهد. تسهل فهم الدوائر المعقدة.
+                                </p>
+                                <a href="#" class="btn btn-main">الذهاب للامتحان</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="marks" class="tab py-5">
+            <div class="container">
+                <h2 class="section-title">نتايجي</h2>
+                <div class="row">
+                    <div class="col-lg-4 px-2">
+                        <div class="course-card">
+                            <div class="card-body">
+                                <h5 class="card-title">امتحان 1</h5>
+                                <p class="card-text">40/50</p>
+                                <a href="#" class="btn btn-main">عرض الامتحان</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="books" class="tab py-5">
+            <div class="container">
+                <h2 class="section-title">الكتب</h2>
+                <div class="row">
+                    <div class="col-lg-4 px-2">
+                        <div class="course-card">
+                            <div class="card-body">
+                                <h5 class="card-title">نظرية كيرشوف</h5>
+                                <p class="card-text">
+                                    نظرية كيرشوف تحلل الدوائر الكهربائية. تتضمن قانونين للتيار
+                                    والجهد. تسهل فهم الدوائر المعقدة.
+                                </p>
+                                <a href="#" class="btn btn-main">اقرأ الكتاب</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="audio" class="tab py-5">
+            <div class="container">
+                <h2 class="section-title">صوتيات</h2>
+                <div class="row">
+                    @forelse ($audios as $audio)
+                        <div class="col-lg-4 px-2">
+                            <div class="course-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $audio->audio_name }}</h5>
+                                    <p class="card-text">{{ $audio->description }}
+                                    </p>
+                                    <audio src="{{ $audio->url }}" controls></audio>
+                                </div>
+
+                            </div>
+                        </div>
+                    @empty
+                        <div class="col-lg-12 mb-2">
+                            <div class="fs-3 text-center"
+                                style="background-color: rgba(55, 183, 195, 0.5); border-radius: 5px" role="alert">
+                                لا يوجد ملفات صوتية بعد
+                            </div>
+                        </div>
+                    @endforelse
+
+                </div>
+            </div>
+        </section>
+        <section id="profile" class="tab py-5">
+            <div class="container">
+                <h2 class="section-title">بروفايلي</h2>
+                <form action="" method=""
+                    class="edit-profile d-flex flex-wrap align-items-center justify-content-start">
+                    <div class="image-input col-12 d-flex flex-column p-2">
+                        <label for="uimage">صورة الحساب</label>
+                        <input type="file" id="uimage" name="uimage" />
+                    </div>
+                    <div class="name-input col-md-6 col-12 d-flex flex-column p-2">
+                        <label for="name">الاسم</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div class="email-input col-md-6 col-12 d-flex flex-column p-2">
+                        <label for="email">البريد الالكتروني</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="phone-input col-md-6 col-12 d-flex flex-column p-2">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" name="phone" minlength="11" maxlength="11" required />
+                    </div>
+                    <div class="level-input col-md-6 col-12 d-flex flex-column p-2">
+                        <label for="level">السنة الدراسية</label>
+                        <input type="text" id="level" name="level" required />
+                    </div>
+                    <button class="edit-btn me-2 mt-4">تعديل الحساب</button>
+                </form>
+            </div>
+        </section>
+    </main>
 @endsection
+
+@push('scripts')
+    <script>
+        function toggleComments(button) {
+            var post = button.closest(".post"); // Find the closest post container
+            var commentsSection = post.querySelector(".post-comments"); // Find comments section within the post
+            commentsSection.style.display =
+                commentsSection.style.display === "none" ||
+                commentsSection.style.display === "" ?
+                "block" :
+                "none";
+            var shareSection = post.querySelector(".post-share"); // Find comments section within the post
+            shareSection.style.display =
+                shareSection.style.display === "none" ||
+                shareSection.style.display === "" ?
+                "flex" :
+                "none";
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("loaded");
+
+            const buttons = document.querySelectorAll(".nav-btn");
+            const tabs = document.querySelectorAll(".tab");
+
+            buttons.forEach((button) => {
+                button.addEventListener("click", function() {
+                    console.log("clicked");
+                    buttons.forEach((btn) => btn.classList.remove("active"));
+                    this.classList.add("active");
+                    const targetSection = this.classList[1].replace("-tab", "");
+                    tabs.forEach((tab) => tab.classList.remove("active"));
+                    document.getElementById(targetSection).classList.add("active");
+                });
+            });
+            document.getElementById("courses").classList.add("active");
+        });
+    </script>
+@endpush

@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -15,21 +15,26 @@ class User extends Authenticatable
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var string[]
      */
     protected $fillable = [
         'name',
         'email',
         'password',
+        'username',
+        'groupid',
+        'avatar',
         'phone',
-        'gov',
-        'photo'
+        'status',
+        'only',
+        'mac',
+        'filename'
     ];
 
     /**
      * The attributes that should be hidden for serialization.
      *
-     * @var array<int, string>
+     * @var array
      */
     protected $hidden = [
         'password',
@@ -39,34 +44,41 @@ class User extends Authenticatable
     /**
      * The attributes that should be cast.
      *
-     * @var array<string, string>
+     * @var array
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    protected $appends = [
+        'time_ago'
+    ];
 
-    public function addresses(){
-        return $this->hasMany(Address::class);
+    public function getTimeAgoAttribute()
+    {
+        return $this->created_at->diffForHumans();
     }
-    public function requests(){
-        return $this->hasMany(Request::class);
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category', 'groupid');
     }
-    public function problems(){
-        return $this->hasMany(Problem::class);
+    public function answers()
+    {
+        return $this->hasMany('App\Models\Answer');
     }
-    public function notifications(){
-        return $this->hasMany(Notification::class);
+    public function top()
+    {
+        return $this->hasOne('App\Models\Top');
     }
-    public function reviews(){
-        return $this->hasMany(Review::class);
+    public function messages()
+    {
+        return $this->hasMany('App\Models\Message');
     }
-    public function ratings(){
-        return $this->hasMany(Rating::class);
+    public function lessons()
+    {
+        return $this->hasMany('App\Models\Lesson_member');
     }
-    public function devices(){
-        return $this->hasMany(Device::class);
-    }
-    public function worker(){
-        return $this->hasOne(Worker::class);
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment');
     }
 }

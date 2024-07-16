@@ -2,83 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#EDC607" />
-    <meta name="author" content="Ultra Progress" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>استاذ رجب الباز </title>
+    <meta name="theme-color" content="#001a65" />
+    <meta name="msapplication-navbutton-color" content="#37b7c3" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#37b7c3" />
+    <meta name="author" content="Ahmed Eltaroun ( Master code )" />
     <meta name="MobileOptimized" content="320" />
-    <meta property="og:title" content="Seyanty" />
+    <meta property="og:title" content="الرئيسية" />
     <meta property="og:type" content="website" />
-    <title>صيانتي</title>
-    <!-- Google Fonts -->
+    <meta property="og:url" content="https://ragabelbaz.com" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="ragabelbaz" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
-    <link rel="shortcut icon" href="{{ env('APP_URL') }}/{{ asset('web_files') }}/images/favicon.png" type="image/png">
-    <!-- Bootstrap -->
-    <link href="{{ env('APP_URL') }}/{{ asset('admin_files') }}/vendors/bootstrap/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="{{ env('APP_URL') }}/{{ asset('admin_files') }}/vendors/font-awesome/css/font-awesome.min.css"
-        rel="stylesheet">
-    <!-- Datatables -->
     <link
-        href="{{ env('APP_URL') }}/{{ asset('admin_files') }}/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css"
-        rel="stylesheet">
-    <link
-        href="{{ env('APP_URL') }}/{{ asset('admin_files') }}/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css"
-        rel="stylesheet">
-    <link
-        href="{{ env('APP_URL') }}/{{ asset('admin_files') }}/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css"
-        rel="stylesheet">
-    <link
-        href="{{ env('APP_URL') }}/{{ asset('admin_files') }}/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css"
-        rel="stylesheet">
-    <link
-        href="{{ env('APP_URL') }}/{{ asset('admin_files') }}/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css"
-        rel="stylesheet">
-    <!-- Custom Theme Style -->
-    <link href="{{ env('APP_URL') }}/{{ asset('admin_files') }}/build/css/custom.min.css" rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="{{ env('APP_URL') . asset('admin_files') }}/favicon.png" />
+    <link rel="stylesheet" href="{{ env('APP_URL') . asset('admin_files') }}/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="{{ env('APP_URL') . asset('admin_files') }}/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="{{ env('APP_URL') . asset('admin_files') }}/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/droid-arabic-kufi" type="text/css" />
     @stack('styles')
     <style>
-        .btn-group,
-        .btn-group-vertical {
-            width: 100%;
+        div.dataTables_wrapper div.dataTables_filter input {
+            margin-right: 0.5em;
         }
 
-        #datatable-buttons_length {
-            display: inline-block;
-            width: 50%;
-            text-align: right;
-            margin-top: 19px;
+        .page-item:last-child .page-link {
+            border-top-left-radius: 0.25rem;
+            border-bottom-left-radius: 0.25rem;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
         }
 
-        #datatable-buttons_filter {
-            width: 50%;
-            display: inline-block;
-            text-align: left;
+        .page-item:first-child .page-link {
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
         }
 
-        .dataTables_info {
-            width: 50%;
-            float: left;
-        }
-        div.dataTables_wrapper div.dataTables_paginate{
-            margin-top: 9px;
-        }
-        table{margin-bottom: 3px !important;    text-align: right;}
-        .x_title h2 {
-            float: none;
-            width: 100%;
-            text-align: center;
-        }
-        table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after{
-            left: 8px;
-            right: auto;
+        .toast {
+            position: fixed;
+            top: 0;
+            z-index: 99999;
+            min-width: 300px;
         }
 
+        .toast-header button.close {
+            background-color: transparent;
+            border: none;
+            font-size: 22px;
+        }
     </style>
 </head>
+
+<body class="rtl">

@@ -1,304 +1,185 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#EDC607" />
-    <meta name="author" content="Ultra Progress" />
-    <meta name="MobileOptimized" content="320" />
-    <meta property="og:title" content="Seyanty" />
-    <meta property="og:type" content="website" />
-    <title>صيانتي</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
-    <link rel="shortcut icon" href="./{{ asset('web_files') }}/images/favicon.png" type="image/png">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="./{{ asset('web_files') }}/assets/Bootstrap/css/bootstrap.min.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="./{{ asset('web_files') }}/assets/FontAwesome/css/all.min.css" />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="./{{ asset('web_files') }}/main.css" />
-</head>
-
-<body>
-    <!-- Header Section -->
-    <header class="d-flex justify-content-between">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container d-flex align-items-center justify-content-between gap-5">
-                <a class="navbar-brand" href="#">
-                    <img src="./{{ asset('web_files') }}/images/logoWhite.png" width="90" alt="Logo" />
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#About">خدماتنا</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#Videos">آراء العملاء</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#Contact">تواصل معنا</a>
-                        </li>
-                    </ul>
-                    <div class="register">
-                        <button class="headerBtn">تحميل التطبيق</button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section id="Hero" class="position-relative pt-5 pt-md-0">
-            <div
-                class="container hero position-relative d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center text-center text-md-end gap-5 gap-md-0">
-                <div class="heroContent col-12 col-md-6">
-                    <h1>تطبيق صيـــانــتــي</h1>
-                    <h3>
-                        هو المكان الأمثل لتقديم حلولاً شاملة لصيانة جميع أنواع المعدات
-                        والأجهزة، بأعلى معايير الجودة وأسعار تنافسية.
-                    </h3>
-                    <button class="heroBtn">حمل التطبيق الآن</button>
-                </div>
-                <div class="heroImg">
-                    <img src="./{{ asset('web_files') }}/images/hero.png" class="" alt="" />
-                </div>
-            </div>
-        </section>
-        <section id="Services" class="d-flex flex-column align-items-center justify-content-center gap-3">
-            <h2>خدماتنـــا</h2>
-            <div class="container services d-flex justify-content-between align-items-center flex-wrap">
-                <ul class="cards">
-                    <li>
-                        <div class="card">
-                            <img src="./{{ asset('web_files') }}/images/service1.jpg" class="card__image"
-                                alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header">
-                                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <div class="card__header-text">
-                                        <h3 class="card__title">سباكة</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="card">
-                            <img src="./{{ asset('web_files') }}/images/service4.jpg" class="card__image"
-                                alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header">
-                                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <div class="card__header-text">
-                                        <h3 class="card__title">كهرباء</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="card">
-                            <img src="./{{ asset('web_files') }}/images/service3.jpg" class="card__image"
-                                alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header">
-                                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <div class="card__header-text">
-                                        <h3 class="card__title">تكييفات</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="card">
-                            <img src="./{{ asset('web_files') }}/images/service5.jpg" class="card__image"
-                                alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header">
-                                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <div class="card__header-text text-center">
-                                        <h3 class="card__title">فلاتر</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="card">
-                            <img src="./{{ asset('web_files') }}/images/service2.jpg" class="card__image"
-                                alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header">
-                                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                        <path />
-                                    </svg>
-                                    <div class="card__header-text text-center">
-                                        <h3 class="card__title">أجهزة منزلية</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Advertisment Section -->
-        <section id="Advertisment" class="">
-            <div class="container d-flex justify-content-between align-items-center">
-                <div class="col-12 col-md-6 py-5 text-center text-md-end">
-                    <p class="ad-title">حمل تطبيق صيانتي الآن</p>
-                    <p class="ad-subtitle">و هنوفرلك الصنايعي و الخدمة اللي محتاجها بأعلى جودة و أسرع وقت</p>
-                    <button class="ad-cta" onclick="window.location.href='auth.html'">
-                        حمل التطبيق الآن
-                    </button>
-                </div>
-                <div class="col-12 col-md-6 px-2 ad-img d-none d-md-flex justify-content-end align-items-center">
-                    <img src="./{{ asset('web_files') }}/images/logo.png" alt="" />
-                </div>
-            </div>
-        </section>
-
-        <!-- Reviews section -->
-        <section id="Reviews" class="d-flex flex-column align-items-center justify-content-center py-5">
-            <div class="row d-flex justify-content-center testimonial-pos">
-                <div class="col-md-12 pt-4 d-flex justify-content-center">
-                    <h3>آراء عملاؤنا </h3>
-                </div>
-                <div class="col-md-12 d-flex justify-content-center my-2">
-                    <h2>آرائكم و ثقتكم هي أكبر حافذ لنا</h2>
-                </div>
-            </div>
-            <section class="home-testimonial-bottom">
-                <div class="container testimonial-inner">
-                    <div class="row d-flex justify-content-center gap-0">
-                        <div class="col-md-4 p-2">
-                            <div class="tour-item ">
-                                <div class="tour-desc bg-white">
-                                    <div class="tour-text color-grey-3 text-center">&ldquo;العامل كان في غاية الاحترام
-                                        و في مستوى عالي من الاحترافية المهنية&rdquo;</div>
-                                    <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people"
-                                            src="./{{ asset('web_files') }}/images/avatar.png" alt=""></div>
-                                    <div class="link-name d-flex justify-content-center">عبدالرحمن النحاس</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 p-2">
-                            <div class="tour-item ">
-                                <div class="tour-desc bg-white">
-                                    <div class="tour-text color-grey-3 text-center">&ldquo;العامل كان في غاية الاحترام
-                                        و في مستوى عالي من الاحترافية المهنية&rdquo;</div>
-                                    <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people"
-                                            src="./{{ asset('web_files') }}/images/avatar.png" alt=""></div>
-                                    <div class="link-name d-flex justify-content-center">عبدالرحمن النحاس</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 p-2">
-                            <div class="tour-item ">
-                                <div class="tour-desc bg-white">
-                                    <div class="tour-text color-grey-3 text-center">&ldquo;العامل كان في غاية الاحترام
-                                        و في مستوى عالي من الاحترافية المهنية&rdquo;</div>
-                                    <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people"
-                                            src="./{{ asset('web_files') }}/images/avatar.png" alt=""></div>
-                                    <div class="link-name d-flex justify-content-center">عبدالرحمن النحاس</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="Contact" class="d-flex align-items-center py-5">
-            <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-5">
-                <div class="contactForm col-12 col-md-7 p-lg-5">
-                    <div class="card text-center text-md-end">
-                        <h2>تـــواصــل معــنا</h2>
-                        <form action="" class="row justify-content-center align-items-center flex-column g-3">
-                            <input class="col-12" type="text" placeholder="اسم المستخدم" />
-                            <input class="col-12" type="number" placeholder="رقم التليفون" />
-                            <textarea class="col-12" type="textarea" cols="60" rows="6" placeholder="اترك رسالتك هنا ..."></textarea>
-                            <button class="contact-btn btn" type="submit">ارسال</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="contactIllustration col-12 col-md-5">
-                    <img src="./{{ asset('web_files') }}/images/contact.svg" class="contactImg" alt="" />
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer id="Footer">
-        <div class="container mb-5">
-            <div class="text-center text-lg-start text-white pt-5">
-                <div class="text-center text-md-end mt-5">
-                    <div class="row mt-3">
-                        <div class="links col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 class="fw-bold">الأقســام</h6>
-                            <p>
-                                <a href="#">الرئيسية</a>
-                            </p>
-                            <p>
-                                <a href="#">خدماتنا</a>
-                            </p>
-                            <p>
-                                <a href="#">آراء العملاء</a>
-                            </p>
-                            <p>
-                                <a href="#">تواصل معنا</a>
-                            </p>
-                        </div>
-
-                        <div class="links col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 class="fw-bold">أهم الروابط</h6>
-                            <p>
-                                <a href="#">حمل التطبيق الآن</a>
-                            </p>
-                        </div>
-
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 pt-4">
-                            <img src="./{{ asset('web_files') }}/images/logoWhite.png" class="img-fluid"
-                                alt="Altafawouk Logo" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+@extends('web.layouts.app')
+@push('style')
+<link rel="stylesheet" href="{{asset('web_files')}}/assets/Animate/css/animate.css">
+@endpush
+@section('content')
+<main>
+  <!-- Hero Section -->
+  <section id="Hero" class="hero">
+    <div class="container d-flex justify-content-start align-items-center">
+      <svg class="blobContainer" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#eee" d="M34.5,-58.2C47,-52.5,61.2,-48,68.5,-38.5C75.9,-29,76.5,-14.5,74,-1.4C71.5,11.6,66,23.3,59.3,33.9C52.6,44.5,44.7,54.1,34.6,58.6C24.5,63.1,12.2,62.6,-2.1,66.2C-16.4,69.8,-32.8,77.5,-45.4,74.5C-58,71.4,-66.8,57.5,-67.2,43.3C-67.6,29.1,-59.5,14.5,-60.5,-0.6C-61.5,-15.7,-71.6,-31.4,-67.5,-39.3C-63.5,-47.1,-45.3,-47.1,-31.7,-52.2C-18.1,-57.3,-9.1,-67.6,1,-69.2C11,-70.9,21.9,-63.9,34.5,-58.2Z" transform="translate(100 100)" />
+      </svg>
+      <img class="hero-img" src="{{asset('web_files')}}/images/hero.png" />
+      <div class="heroContent text-white">
+        <p class="subTxt">
+          متعة تعلم
+        </p>
+        <h1 class="mainTxt">الرياضيات</h1>
+        @if(Auth::user())
+          <button class="heroBtn d-flex align-items-center" onclick="window.location.href=`{{url('dashboard')}}`">
+            <i class="ms-3 fa-solid fa-right-to-bracket" style="color:#0049ab "></i> الدخول للموقع
+          </button>
+        @else
+          <button class="heroBtn d-flex align-items-center" onclick="window.location.href=`{{url('login')}}`">
+            <i class="ms-3 fa-solid fa-right-to-bracket" style="color:#0049ab "></i> أبدأ رحلتــك الآن
+          </button>
+        @endif
+      </div>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section class="d-flex justify-content-center align-items-center pt-5" id="About">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-5">
+      <div class="col-12 col-md-6 w-md-75">
+        <div class="aboutContent">
+          <h1>نبذة تعريفية</h1>
+          <h2>أ/ محمد النجار</h2>
+          <ul>
+            <li>معلم خبير رياضيات</p>
+            <li>حاصل على بكالوريوس علوم رياضيات و ماجستير في حساب المثلثات و دبلومة في شرح الرياضيات</p>
+            <li>خبرة أكثر من 25 سنة في المرحلة الثانوية</p>
+          </ul>
         </div>
-        <div class="footerBottom text-center p-3" dir="ltr">
-            Seyanty © 2024. Developed by
-            <a href="https://www.facebook.com/ultraprogress1">Ultra Progress</a>.
-            All Rights Reserved.
+      </div>
+      <div class="photo col-12 col-md-6 position-relative">
+        <img src="{{asset('web_files')}}/images/dots.png" class="img-fluid dotsOne position-absolute " alt="">
+        <img src="{{asset('web_files')}}/images/dots.png" class="img-fluid dotsTwo position-absolute " alt="">
+        <img src="{{asset('web_files')}}/images/teacher.jpg" class="img-fluid" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section id="Videos">
+    <div class="container d-flex flex-column align-items-center justify-content-center gap-5">
+      <div class="d-flex align-items-center justify-content-center position-relative">
+        <h2 class="videosTitle">الفيديوهات المجانية</h2>
+        <img src="{{asset('web_files')}}/images/kodak.png" class="img-fluid kodakOne" alt="kodak">
+        <img src="{{asset('web_files')}}/images/kodak.png" class="img-fluid kodakTwo" alt="kodak">
+      </div>
+      <div class="videoCards d-flex justify-content-between align-items-center gap-1 mt-5">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-3 col-md-4 p-3">
+            <div class="videoCard">
+              <img src="{{asset('web_files')}}/images/videos/video1.jpg" class="videoImg" alt="">
+              <div class="videoTxt position-absolute ">
+                <h3>الجزر التربيعي</h3>
+                <p>مراجعة على الأسس و شرح الجزر التربيعي</p>
+              </div>
+              <div class="playButton d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-play fa-lg"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 col-md-4 p-3">
+            <div class="videoCard w-100">
+              <img src="{{asset('web_files')}}/images/videos/video2.jpg" class="videoImg" alt="">
+              <div class="videoTxt position-absolute ">
+                <h3>المعادلات</h3>
+                <p>شرح المعادلات و حل مسائل</p>
+              </div>
+              <div class="playButton d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-play fa-lg"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 col-md-4 p-3">
+            <div class="videoCard w-100">
+              <img src="{{asset('web_files')}}/images/videos/video3.jpg" class="videoImg" alt="">
+              <div class="videoTxt position-absolute ">
+                <h3>التفاضل الجزئي</h3>
+                <p>مراجعة على التفاضل و شرح التفاضل الجزئي</p>
+              </div>
+              <div class="playButton d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-play fa-lg"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 col-md-4 p-3">
+            <div class="videoCard w-100">
+              <img src="{{asset('web_files')}}/images/videos/video4.jpg" class="videoImg" alt="">
+              <div class="videoTxt position-absolute ">
+                <h3>مسائل متنوعة</h3>
+                <p>مراجعة على ما سبق</p>
+              </div>
+              <div class="playButton d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-play fa-lg"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 col-md-4 p-3">
+            <div class="videoCard">
+              <img src="{{asset('web_files')}}/images/videos/video1.jpg" class="videoImg" alt="">
+              <div class="videoTxt position-absolute ">
+                <h3>الجزر التربيعي</h3>
+                <p>مراجعة على الأسس و شرح الجزر التربيعي</p>
+              </div>
+              <div class="playButton d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-play fa-lg"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 col-md-4 p-3">
+            <div class="videoCard w-100">
+              <img src="{{asset('web_files')}}/images/videos/video2.jpg" class="videoImg" alt="">
+              <div class="videoTxt position-absolute ">
+                <h3>المعادلات</h3>
+                <p>شرح المعادلات و حل مسائل</p>
+              </div>
+              <div class="playButton d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-play fa-lg"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 col-md-4 p-3">
+            <div class="videoCard w-100">
+              <img src="{{asset('web_files')}}/images/videos/video3.jpg" class="videoImg" alt="">
+              <div class="videoTxt position-absolute ">
+                <h3>التفاضل الجزئي</h3>
+                <p>مراجعة على التفاضل و شرح التفاضل الجزئي</p>
+              </div>
+              <div class="playButton d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-play fa-lg"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 col-md-4 p-3">
+            <div class="videoCard w-100">
+              <img src="{{asset('web_files')}}/images/videos/video4.jpg" class="videoImg" alt="">
+              <div class="videoTxt position-absolute ">
+                <h3>مسائل متنوعة</h3>
+                <p>مراجعة على ما سبق</p>
+              </div>
+              <div class="playButton d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-play fa-lg"></i>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap Script File -->
-    <script src="./{{ asset('web_files') }}/assets/Bootstrap/js/bootstrap.min.js"></script>
-    <!-- FontAwesome Script File -->
-    <script src="./{{ asset('web_files') }}/assets/FontAwesome/js/all.min.js"></script>
-</body>
-
-</html>
+  <!-- Contact Section -->
+  <section id="Contact">
+    <div class="card d-flex align-items-center justify-content-center">
+      <h2>تواصل معنا</h2>
+      @include('web.includes.message')
+      <form class="row justify-content-center align-items-center flex-column g-3" action="{{url('addMessage')}}" method="POST">
+        @csrf
+        <input class="col-12" type="text" placeholder="اسم المستخدم" name="username">
+        <input class="col-12" type="number" placeholder="رقم التليفون" name="phone">
+        <textarea class="col-12" type="textarea" cols="60" rows="6" placeholder="اترك رسالتك هنا ..." name="message" required></textarea>
+        <button class="contact-btn btn" type="submit">ارسال</button>
+      </form>
+    </div>
+  </section>
+</main>
+@push('script')
+<script src="{{asset('web_files')}}/assets/Animate/js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+@endpush
+@endsection

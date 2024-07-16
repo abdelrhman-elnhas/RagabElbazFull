@@ -8,11 +8,26 @@ use Illuminate\Database\Eloquent\Model;
 class Notification extends Model
 {
     use HasFactory;
-    protected $fillable=[
-        'title',
-        'content',
+    protected $fillable = [
         'user_id',
+        'content',
         'model',
-        'model_id',
+        'read_at',
+        'type',
     ];
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+    ];
+
+    protected $appends = [
+        'time_ago'
+    ];
+
+    public function getTimeAgoAttribute(){
+        return $this->created_at->diffForHumans();
+    }
+    public function user() {
+        return $this->belongsTo('App\Models\User');
+    }
 }

@@ -1,0 +1,68 @@
+:root {
+    --first-color: #071952;
+    --first-alt-color: #0049ab;
+    --sec-color: #37b7c3;
+    --third-color: #ffd144;
+    --fourth-color: #daebff;
+    --font-main: "Baloo Bhaijaan 2", sans-serif;
+}
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    direction: rtl;
+}
+* {
+    font-family: var(--font-main);
+}
+.row {
+    margin: 0;
+    align-items: center;
+    min-height: 100vh;
+}
+h1 {
+    font-weight: bold;
+    color: var(--first-color) !important;
+}
+.form-control {
+    background-color: #9bdbe1 !important;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    padding: 15px;
+    width: 100%;
+    caret-color: var(--third-color);
+    margin: 20px 0;
+    color: var(--first-color) !important;
+}
+.form-control::placeholder {
+    color: #fff !important;
+    font-weight: bold;
+}
+.btn {
+    background-color: var(--sec-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    border: 2px solid var(--sec-color);
+}
+
+.btn:hover {
+    transition: 0.5s ease-in-out;
+    background-color: transparent;
+    color: var(--sec-color);
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+    color: var(--first-color);
+    transition: 0.5 ease-in-out;
+    font-size: 18px;
+    font-weight: bold;
+}
